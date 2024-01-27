@@ -1,0 +1,1473 @@
+/* 基本スタイル (320px〜480px) */
+/* ネオ大焼肉 エース */
+html {
+    background-color: #000;
+}
+
+
+/* スプラッシュ画面用の追加スタイル */
+.splash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    /* ページ全体を覆う */
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    /* 白背景 */
+    z-index: 5;
+    /* ヘッダーより上に表示 */
+}
+
+#logo {
+    filter: saturate(0);
+    /* 最初は彩度0で表示 */
+    transition: filter 2s ease-in-out;
+    /* トランジションの時間と種類 */
+
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+    background-color: #D9D4CE;
+    width: 100%;
+    height: 70px;
+    flex-shrink: 0;
+    position: fixed;
+    z-index: 4;
+    top: 0px;
+}
+
+#section2 {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(100, 100, 100, 0.9);
+    /* 赤色の半透明 */
+    width: 100%;
+    flex-shrink: 0;
+    position: fixed;
+    z-index: 3;
+    top: -50px;
+}
+
+.menu {
+    width: 100%;
+    /* メニューの幅 */
+    height: 100%;
+    overflow: hidden;
+    color: #FFF;
+    margin-top: 40%;
+}
+
+/* 画面幅が380px以上の場合のスタイル */
+@media (min-width: 380px) {
+    .menu {
+        margin-top: 30%;
+    }
+}
+
+.fade {
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#close-button {
+    color: #f00;
+}
+
+.openbtn1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 100%;
+    flex-shrink: 0;
+    background: #000;
+    margin: auto 0 0 auto;
+}
+
+/*ボタン内側*/
+.openbtn1 span {
+    display: inline-block;
+    transition: all .4s;
+    /*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 2px;
+    border-radius: 5px;
+    background: #fff;
+    width: 70%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+    top: 14px;
+    left: 50%;
+    /* 左から50%の位置に設定 */
+    transform: translate(-50%, -50%);
+    /* 中央に配置するための調整 */
+}
+
+.openbtn1 span:nth-of-type(2) {
+    top: 22px;
+    left: 50%;
+    /* 左から50%の位置に設定 */
+    transform: translate(-50%, -50%);
+    /* 中央に配置するための調整 */
+}
+
+.openbtn1 span:nth-of-type(3) {
+    top: 30px;
+    left: 50%;
+    /* 左から50%の位置に設定 */
+    transform: translate(-50%, -50%);
+    /* 中央に配置するための調整 */
+}
+
+.openbtn1.active span {
+    background-color: #f00;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 15px;
+    left: 22px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 40%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+    opacity: 0;
+    /*真ん中の線は透過*/
+}
+
+.openbtn1.active span:nth-of-type(3) {
+    top: 27px;
+    left: 22px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 40%;
+}
+
+
+.openbtn1 p {
+    color: #FFF;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    /* 左から50%の位置に設定 */
+    transform: translate(-50%, -50%);
+    /* 中央に配置するための調整 */
+}
+
+.logo-image {
+    position: absolute;
+    top: 5px;
+    /* これにより、コンテナの左上隅に配置されます */
+    left: 2%;
+    width: 70px;
+    /* オーバーレイ画像のサイズを調整 */
+    height: 60px;
+    /* border-radius: 25%; */
+    z-index: 2;
+}
+
+.logo-image-2 {
+    left: 25%;
+}
+
+.logo-image-3 {
+    left: 40%;
+}
+
+.logo-image-4 {
+    left: 56%;
+}
+
+.logo-chr {
+    position: absolute;
+    top: 15px;
+    /* これにより、コンテナの左上隅に配置されます */
+    width: 40px;
+    /* オーバーレイ画像のサイズを調整 */
+    height: 40px;
+    /* border-radius: 25%; */
+    z-index: 2;
+}
+
+/* 画面幅が400px以上の場合のスタイル */
+@media (min-width: 400px) {
+    .logo-chr {
+        top: 10px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.mainvisual {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 380px) {
+    .color-font {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 379px) {
+    .color-font2 {
+        color: rgb(0, 0, 0);
+    }
+}
+
+
+
+.main-image {
+    /* セレクタの修正 */
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.photo-text {
+    writing-mode: vertical-rl;
+    color: #ffffff;
+    position: absolute;
+    right: 20%;
+    top: 60%;
+    /* 上部から中央に配置 */
+    transform: translateY(-50%);
+    /* 中央揃えのための調整 */
+    font-size: 25px;
+    width: 23px;
+    height: 500px;
+    line-height: 2em;
+    /* ここで行の高さ（文字間隔）を設定 */
+    font-family: kaisei HarunoUmi;
+}
+
+.photo-text2 {
+    writing-mode: vertical-rl;
+    color: #ffffff;
+    position: absolute;
+    right: 10%;
+    top: 75%;
+    /* 上部から中央に配置 */
+    transform: translateY(-50%);
+    /* 中央揃えのための調整 */
+    font-size: 25px;
+    width: 23px;
+    height: 500px;
+    line-height: 2em;
+    /* ここで行の高さ（文字間隔）を設定 */
+    font-family: kaisei HarunoUmi;
+}
+
+.photo-text3 {
+    writing-mode: vertical-rl;
+    color: #ffffff;
+    position: absolute;
+    left: 12%;
+    top: 100%;
+    /* 上部から中央に配置 */
+    transform: translateY(-50%);
+    /* 中央揃えのための調整 */
+    font-size: 25px;
+    width: 23px;
+    height: 500px;
+    line-height: 2em;
+    /* ここで行の高さ（文字間隔）を設定 */
+    font-family: kaisei HarunoUmi;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* コンテナの高さを必要に応じて調整してください。 */
+    overflow: hidden;
+    /* はみ出した要素を非表示にします。 */
+}
+
+/* 基本の回転画像スタイル。 */
+.rotated-image2,
+.rotated-image3 {
+    position: absolute;
+    /* 絶対位置指定でコンテナ内を自由に動かせます。 */
+    transform: rotate(-45deg);
+    /* 45度回転。 */
+    /* `top` と `left` を使用して配置を制御します。 */
+}
+
+.rotated-image {
+    width: 270px;
+    top: 20px;
+    /* 位置を調整してください。 */
+    left: 30px;
+    /* 位置を調整してください。 */
+    transform: rotate(45deg);
+    /* 45度回転。 */
+    position: absolute;
+}
+
+.rotated-image2 {
+    width: 185px;
+    height: 185px;
+    top: 250px;
+    /* 位置を調整してください。 */
+    left: 240px;
+    /* 位置を調整してください。 */
+}
+
+.rotated-image3 {
+    width: 180px;
+    height: 180px;
+    top: 380px;
+    /* 位置を調整してください。 */
+    left: 80px;
+    /* 位置を調整してください。 */
+}
+
+
+.container3 {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px;
+    place-items: center;
+    overflow: hidden;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    /* 水平方向の中央揃え */
+    align-items: center;
+    /* 垂直方向の中央揃え */
+}
+
+.rotated-image4,
+.rotated-image5 {
+    transform: rotate(-45deg);
+    place-items: center;
+    width: 150px;
+    height: 150px;
+}
+
+.rotated-image4 img,
+.rotated-image5 img {
+    width: 150px;
+    height: 150px;
+
+}
+
+.text-Container {
+    display: flex;
+    width: 90%;
+    height: 125px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #353536;
+}
+
+.text-Container p {
+    color: #FFF;
+    text-align: center;
+    font-family: Kaisei HarunoUmi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* 画面幅が350px以上の場合のスタイル */
+@media (min-width: 350px) {
+    .text-Container p {
+        font-size: 20px;
+    }
+}
+
+
+.text {
+    color: #FFF;
+    text-align: left;
+    font-family: Kaisei HarunoUmi;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10%;
+}
+
+.shop-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.shop-photo img {
+    width: 100%;
+}
+
+
+.text-syo-sai {
+    display: flex;
+    /* フレックスコンテナを定義 */
+    flex-direction: row;
+    /* 子要素を横方向に配置 */
+    color: #FFF;
+    text-align: left;
+    font-family: Kaisei HarunoUmi;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 5px 20px 5px 20px;
+}
+
+.spacer {
+    flex-grow: 2;
+    /* この空白スペーサーがテキストの2倍の空間を取るように設定 */
+}
+
+.text-Container2 {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    flex-direction: column;
+    justify-content: top;
+    flex-shrink: 0;
+
+    text-align: left;
+    font-family: Kaisei HarunoUmi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #FFF;
+    margin: 5px 20px 5px 20px;
+}
+
+.map {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+/* Google Mapのiframe */
+.map iframe {
+    position: absolute;
+    top: 45%;
+    width: 80%;
+    height: 100%;
+    left: 50%;
+    /* 左から50%の位置に設定 */
+    transform: translate(-50%, -50%);
+    /* 中央に配置するための調整 */
+}
+
+.text-Container3 {
+    display: flex;
+    width: 100%;
+    height: 125px;
+    flex-direction: column;
+    justify-content: top;
+    flex-shrink: 0;
+
+    text-align: left;
+    font-family: Kaisei HarunoUmi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #FFF;
+    margin: 5px 20px 5px 20px;
+}
+
+.right-text {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 20px 5px 20px;
+    color: #FFF;
+    font-family: Kaisei HarunoUmi;
+}
+
+.cancel {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    /* この行を追加 */
+}
+
+.cancel h3 {
+    color: #FFF;
+    margin: 10%;
+    /* ここはお好みに応じて */
+}
+
+.cancel span {
+    color: #FFF;
+    font-family: 'Kaisei HarunoUmi';
+    font-size: 20px;
+    /* width: 100%; この行は削除 */
+    /* text-align: center; この行は不要なので削除 */
+}
+
+
+.background-image {
+    background-image: url('../images/Rectangle\ 26.jpg');
+    /* 背景画像を設定し、他のスタイルを上書き */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    /* 要素の幅を画面全体にする場合 */
+    height: 500px;
+    /* 高さを指定 */
+}
+
+
+/* なにこれ */
+/* タブレット向けのスタイル
+@media (min-width: 768px) {} */
+
+/* コースメニュー */
+/* 基本スタイル (320px〜480px) */
+.course-menu {
+    color: #FFF;
+    width: 100%;
+    overflow: hidden;
+}
+
+.course-menu p {
+    font-size: 24px;
+}
+
+.photo img {
+    width: 130px;
+    height: auto;
+    margin: 10px;
+}
+
+/* 画面幅が400px以上の場合のスタイル */
+@media (min-width: 350px) {
+    .photo img {
+        width: 150px;
+        height: 150px;
+        margin: 15px;
+    }
+}
+
+.course-container {
+    display: flex;
+
+}
+
+.shape {
+    width: 130px;
+    height: 120px;
+    position: relative;
+    right: 0%;
+}
+
+.shape img {
+    width: 70%;
+    /* 親要素に合わせて画像を伸ばす */
+    height: auto;
+    /* 画像の元のアスペクト比を維持する */
+    transform: rotate(45deg);
+    position: relative;
+    /* 位置指定を相対的に設定 */
+    left: 13px;
+    top: 10px;
+}
+
+.shape p {
+    position: absolute;
+    top: 25%;
+    /* 要素をshapeの上辺に沿わせる */
+    left: 45%;
+    /* 要素を左右中央に配置する */
+    transform: translateX(-50%);
+    /* 要素の幅の半分だけ左に移動させる */
+    padding: 0px 0px;
+    /* テキストの周りに余白を設定する */
+    width: 100%;
+    /* 必要に応じて調整 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+    color: #FFF;
+    font-size: 13px;
+}
+
+/* 画面幅が330px以上の場合のスタイル */
+@media (min-width: 330px) {
+    .shape img {
+        width: 90%;
+        /* 位置指定を相対的に設定 */
+        left: 8px;
+        top: 0px;
+    }
+
+    .shape p {
+        left: 50%;
+        font-size: 16px;
+    }
+}
+
+
+.shape-4 {
+    width: 130px;
+    height: 120px;
+    position: relative;
+    right: 0%;
+}
+
+.shape-4 img {
+    width: 70%;
+    /* 親要素に合わせて画像を伸ばす */
+    height: auto;
+    /* 画像の元のアスペクト比を維持する */
+    transform: rotate(45deg);
+    position: relative;
+    /* 位置指定を相対的に設定 */
+    left: 13px;
+    top: 10px;
+}
+
+.shape-4 p {
+    position: absolute;
+    top: 0%;
+    /* 要素をshapeの上辺に沿わせる */
+    left: 45%;
+    /* 要素を左右中央に配置する */
+    transform: translateX(-50%);
+    /* 要素の幅の半分だけ左に移動させる */
+    padding: 0px 0px;
+    /* テキストの周りに余白を設定する */
+    width: 110%;
+    /* 必要に応じて調整 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+    color: #FFF;
+    font-size: 12px;
+}
+
+/* 画面幅が330px以上の場合のスタイル */
+@media (min-width: 330px) {
+    .shape-4 img {
+        width: 90%;
+        /* 位置指定を相対的に設定 */
+        left: 8px;
+        top: 0px;
+    }
+
+    .shape-4 p {
+        left: 48%;
+        font-size: 15px;
+        width: 130%;
+
+    }
+}
+
+
+.shape-2 {
+    width: 130px;
+    height: 120px;
+    position: relative;
+    left: 0%;
+}
+
+.shape-2 img {
+    width: 70%;
+    /* 親要素に合わせて画像を伸ばす */
+    height: auto;
+    /* 画像の元のアスペクト比を維持する */
+    transform: rotate(45deg);
+    position: relative;
+    /* 位置指定を相対的に設定 */
+    left: 23px;
+    top: 10px;
+}
+
+.shape-2 p {
+    position: absolute;
+    top: 26%;
+    /* 要素をshapeの上辺に沿わせる */
+    left: 54%;
+    /* 要素を左右中央に配置する */
+    transform: translateX(-50%);
+    /* 要素の幅の半分だけ左に移動させる */
+    padding: 0px 0px;
+    /* テキストの周りに余白を設定する */
+    width: 100%;
+    /* 必要に応じて調整 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+    color: #000;
+    font-size: 13px;
+}
+
+/* 画面幅が330px以上の場合のスタイル */
+@media (min-width: 330px) {
+    .shape-2 img {
+        width: 90%;
+        /* 位置指定を相対的に設定 */
+        right: 8px;
+        top: 0px;
+    }
+
+    .shape-2 p {
+        left: 62%;
+        font-size: 16px;
+    }
+}
+
+
+.shape-3 {
+    width: 130px;
+    height: 120px;
+    position: relative;
+    left: 0%;
+}
+
+.shape-3 img {
+    width: 70%;
+    /* 親要素に合わせて画像を伸ばす */
+    height: auto;
+    /* 画像の元のアスペクト比を維持する */
+    transform: rotate(45deg);
+    position: relative;
+    /* 位置指定を相対的に設定 */
+    left: 23px;
+    top: 10px;
+}
+
+.shape-3 p {
+    position: absolute;
+    top: 5%;
+    /* 要素をshapeの上辺に沿わせる */
+    left: 52%;
+    /* 要素を左右中央に配置する */
+    transform: translateX(-50%);
+    /* 要素の幅の半分だけ左に移動させる */
+    padding: 0px 0px;
+    /* テキストの周りに余白を設定する */
+    width: 110%;
+    /* 必要に応じて調整 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+    color: #FFF;
+    font-size: 12px;
+}
+
+/* 画面幅が330px以上の場合のスタイル */
+@media (min-width: 330px) {
+    .shape-3 img {
+        width: 90%;
+        /* 位置指定を相対的に設定 */
+        right: 8px;
+        top: 0px;
+    }
+
+    .shape-3 p {
+        left: 62%;
+        font-size: 15px;
+        width: 130%;
+
+    }
+}
+
+
+
+/* デフォルトスタイル */
+.course-shape {
+    width: 97px;
+    /* 400px未満の場合のデフォルトの幅 */
+    height: 120px;
+    position: relative;
+}
+
+/* 画面幅が380px以上の場合のスタイル */
+@media (min-width: 380px) {
+    .course-shape {
+        width: 130px;
+    }
+}
+
+/* 回転するアニメーション */
+.course-shape img {
+    width: 100%;
+    /* 親要素に合わせて画像を伸ばす */
+    height: auto;
+    /* 画像の元のアスペクト比を維持する */
+    /* ()の中身で回転する角度をいじれる */
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+
+}
+
+.course-shape p {
+    position: absolute;
+    top: 0%;
+    /* 要素をshapeの上辺に沿わせる */
+    left: 50%;
+    /* 要素を左右中央に配置する */
+    transform: translateX(-50%);
+    /* 要素の幅の半分だけ左に移動させる */
+    padding: 5px 10px;
+    /* テキストの周りに余白を設定する */
+    width: 100%;
+    /* 必要に応じて調整 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+    color: #000;
+    font-size: 20px;
+    z-index: 2;
+}
+
+/* 画面幅が400px以上の場合のスタイル */
+@media (min-width: 380px) {
+    .course-shape p {
+        top: -3%;
+        /* 要素をshapeの上辺に沿わせる */
+        left: 50%;
+        /* 要素を左右中央に配置する */
+        font-size: 26px;
+    }
+}
+
+p.chr-expanded {
+    position: absolute;
+    top: 0%;
+    /* 要素をshapeの上辺に沿わせる */
+    left: 50%;
+    /* 要素を左右中央に配置する */
+    transform: translateX(-50%);
+    /* 要素の幅の半分だけ左に移動させる */
+    padding: 0px 0px;
+    /* テキストの周りに余白を設定する */
+    width: 120%;
+    /* 必要に応じて調整 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+    color: #000;
+    font-size: 26px;
+    transition: font-size 0.5s ease;
+}
+
+/* 画面幅が400px以上の場合のスタイル */
+@media (min-width: 380px) {
+    p.chr-expanded {
+        top: -1%;
+        /* 要素をshapeの上辺に沿わせる */
+        left: 50%;
+        /* 要素を左右中央に配置する */
+        font-size: 32px;
+        transition: font-size 0.5s ease;
+    }
+}
+
+p.push-chr {
+    font-size: 16px;
+    top: 44%;
+}
+
+@media (min-width: 380px) {
+    p.push-chr {
+        font-size: 22px;
+        top: 55%;
+    }
+}
+
+/* ボタンデザイン */
+.course-button {
+    position: relative;
+    width: 98px;
+    height: 98px;
+    background-color: #892424;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.course-push {
+    position: relative;
+    width: 53px;
+    height: 53px;
+    top: 40px;
+    left: 40px;
+    background-color: #EA8080;
+    z-index: 2;
+}
+
+.course-shadow {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    top: -13px;
+    left: 40px;
+    background-color: #000000;
+    z-index: 1;
+}
+
+.single-button {
+    position: relative;
+    width: 98px;
+    height: 98px;
+    background-color: #C3C3C3;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.single-push {
+    position: relative;
+    width: 53px;
+    height: 53px;
+    top: 40px;
+    left: 40px;
+    background-color: #FFF;
+    z-index: 2;
+}
+
+.single-shadow {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    top: -13px;
+    left: 40px;
+    background-color: #000000;
+    z-index: 1;
+}
+
+/* 画面幅が380px以上の場合のスタイル */
+@media (min-width: 380px) {
+    .course-button {
+        width: 130px;
+        height: 130px;
+    }
+
+    .course-push {
+        width: 70px;
+        height: 70px;
+        top: 50px;
+        left: 50px;
+    }
+
+    .course-shadow {
+        width: 75px;
+        height: 75px;
+        top: -20px;
+        left: 50px;
+    }
+
+    .single-button {
+        width: 130px;
+        height: 130px;
+    }
+
+    .single-push {
+        width: 70px;
+        height: 70px;
+        top: 50px;
+        left: 50px;
+    }
+
+    .single-shadow {
+        width: 75px;
+        height: 75px;
+        top: -20px;
+        left: 50px;
+    }
+}
+
+
+/* ボタン押された時の挙動 */
+.course-button-pushed {
+    width: 98px;
+    height: 98px;
+    background-color: #EA8080;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.course-push-pushed {
+    position: relative;
+    width: 53px;
+    height: 53px;
+    top: 40px;
+    left: 40px;
+    background-color: #892424;
+    z-index: 2;
+}
+
+.course-shadow-pushed {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    top: -16px;
+    left: 37px;
+    background-color: #5d2727;
+    z-index: 1;
+}
+
+
+.single-button-pushed {
+    position: relative;
+    width: 98px;
+    height: 98px;
+    background-color: #FFF;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.single-push-pushed {
+    position: relative;
+    width: 53px;
+    height: 53px;
+    top: 40px;
+    left: 40px;
+    background-color: #C3C3C3;
+    z-index: 2;
+}
+
+.single-shadow-pushed {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    top: -16px;
+    left: 37px;
+    background-color: #000000;
+    z-index: 1;
+}
+
+/* 画面幅が380px以上の場合のスタイル */
+@media (min-width: 380px) {
+    .course-button-pushed {
+        width: 130px;
+        height: 130px;
+        background-color: #EA8080;
+        transform: rotate(45deg);
+        z-index: 0;
+    }
+
+    .course-push-pushed {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        top: 50px;
+        left: 50px;
+        background-color: #892424;
+        z-index: 2;
+    }
+
+    .course-shadow-pushed {
+        position: relative;
+        width: 75px;
+        height: 75px;
+        top: -25px;
+        left: 45px;
+        background-color: #5d2727;
+        z-index: 1;
+    }
+
+
+    .single-button-pushed {
+        position: relative;
+        width: 130px;
+        height: 130px;
+        background-color: #FFF;
+        transform: rotate(45deg);
+        z-index: 0;
+    }
+
+    .single-push-pushed {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        top: 50px;
+        left: 50px;
+        background-color: #C3C3C3;
+        z-index: 2;
+    }
+
+    .single-shadow-pushed {
+        position: relative;
+        width: 75px;
+        height: 75px;
+        top: -25px;
+        left: 45px;
+        background-color: #000000;
+        z-index: 1;
+    }
+}
+
+img.img-rotation {
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
+}
+
+.price {
+    font-family: 'Kaisei HarunoUmi';
+    color: #FFF;
+    text-align: center;
+}
+
+.explanation {
+    font-family: 'Kaisei HarunoUmi';
+    color: #FFF;
+    text-align: center;
+    margin: 0.3rem 0.6rem 0.3rem 0.6rem;
+}
+
+.explanation-special {
+    font-family: 'Kaisei HarunoUmi';
+    color: #FFF;
+    text-align: center;
+    margin: 0.3rem 0rem 0.3rem 0rem;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/* 画面幅が400px以上の場合のスタイル */
+@media (min-width: 345px) {
+    .explanation-special {
+        font-family: 'Kaisei HarunoUmi';
+        color: #FFF;
+        text-align: center;
+        margin: 0.3rem 2rem 0.3rem 2rem;
+        padding: 5px;
+        font-size: 15px;
+    }
+
+}
+
+.explanation-container {
+    background-image: url("../images/Rectangle 32.png");
+    width: 100%;
+    height: auto;
+    background-size: 100% auto;
+}
+
+.onedan {
+    background-image: url("../images/メインビジュアル１.jpg");
+    background-size: auto 100%;
+}
+
+/* メニュー項目のスタイル */
+.menu-item {
+    padding: 5px 20px;
+    /* パディング */
+    text-align: center;
+    /* 中央揃え */
+    margin: top 20px;
+    font-size: 15px;
+}
+
+/* 画面幅が400px以上の場合のスタイル */
+@media (min-width: 380px) {
+    .menu-item {
+        padding: 10px 20px;
+        /* パディング */
+        font-size: 20px;
+    }
+}
+
+/* メニュー項目をホバーしたときのスタイル */
+.menu-item:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+/* アクティブなメニュー項目のスタイル */
+.active {
+    font-weight: bold;
+    /* 文字を太く */
+}
+
+/* ボタンのスタイル */
+.button {
+    background: #A3A3A3;
+    /* ボタンの背景色 */
+    color: #fff;
+    /* ボタンの文字色 */
+    padding: 10px 20px;
+    /* パディング */
+    text-align: center;
+    /* 中央揃え */
+    display: block;
+    /* ブロック要素として表示 */
+    margin: 10px auto;
+    /* 上下のマージン */
+    width: 80%;
+    /* ボタンの幅 */
+    border: none;
+    /* 枠線なし */
+    transition: background-color 0.3s;
+    /* 背景色の変化を滑らかに */
+}
+
+/* ボタンをホバーしたときのスタイル */
+.button:hover {
+    background-color: #777;
+    cursor: pointer;
+}
+
+
+/* 以下消去 */
+/* .backgroud {
+    width: 100%;
+    background-image: url("../images/Rectangle\ 27.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* 要素の幅を画面全体にする場合 */
+/* height: 316px; */
+/* 高さを指定 */
+/* } */
+
+
+
+/* 以下単品 */
+
+p {
+    font-family: 'Kaisei HarunoUmi';
+}
+
+.left-photo {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+}
+
+.right-shape {
+    width: 150px;
+    height: 140px;
+    position: relative;
+}
+
+.right-shape img {
+    width: 100%;
+    /* 親要素に合わせて画像を伸ばす */
+    height: auto;
+    /* 画像の元のアスペクト比を維持する */
+    transform: rotate(45deg);
+}
+
+.right-shape p {
+    color: #FFFFFF;
+    position: absolute;
+    top: 10%;
+    /* 要素をshapeの上辺に沿わせる */
+    left: 50%;
+    /* 要素を左右中央に配置する */
+    transform: translateX(-50%);
+    /* 要素の幅の半分だけ左に移動させる */
+    padding: 5px 10px;
+    /* テキストの周りに余白を設定する */
+    width: 140%;
+    /* 必要に応じて調整 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+    font-size: 15px;
+
+}
+
+.right-photo {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+}
+
+.left-shape {
+    width: 150px;
+    height: 140px;
+    position: relative;
+}
+
+.left-shape img {
+    width: 100%;
+    height: auto;
+    transform: rotate(45deg);
+}
+
+.left-shape p {
+    color: #FFFFFF;
+    position: absolute;
+    top: 10%;
+    right: 50%;
+    /* left を right に変更 */
+    transform: translateX(50%);
+    /* -50% を 50% に変更 */
+    padding: 5px 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.hidagyu img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.onedan {
+    color: white;
+}
+
+/* アニメーションcss */
+@keyframes dropAndFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.showWithAnimation {
+    animation: dropAndFade 1s ease forwards;
+}
+
+/* アニメーションcss */
+@keyframes riseAndFade {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.hideWithAnimation {
+    animation: riseAndFade 0.5s ease forwards;
+}
+
+
+.text {
+    font-size: 16px;
+    transition: font-size 0.5s ease;
+}
+
+.image-container:hover .text {
+    font-size: 24px;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+#instagram-logo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}
+
+#loading-text {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'Koulen', sans-serif;
+    color: #000;
+    font-size: 20px;
+    /* 他のスタイル設定 */
+}
+
+#loading-text span {
+    display: inline-block;
+    /* 他のスタイル設定があればここに追加 */
+    animation: wave-animation 2s infinite ease-in-out;
+}
+
+/* ウェーブアニメーションのキーフレーム */
+@keyframes wave-animation {
+
+    0%,
+    10%,
+    20%,
+    90%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    30% {
+        transform: translateY(-20px);
+    }
+
+    40%,
+    50%,
+    60% {
+        transform: translateY(0px);
+    }
+
+    70% {
+        transform: translateY(20px);
+    }
+
+    80% {
+        transform: translateY(0px);
+    }
+}
+
+/* アニメーションの遅延を個別に設定 */
+#loading-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+#loading-text span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+#loading-text span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+#loading-text span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+#loading-text span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+#loading-text span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+#loading-text span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+#loading-text span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+#loading-text span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+#loading-text span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
